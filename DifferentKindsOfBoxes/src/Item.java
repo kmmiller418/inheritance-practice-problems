@@ -1,3 +1,4 @@
+import java.util.Objects;
 
 public class Item {
 
@@ -21,4 +22,12 @@ public class Item {
         return weight;
     }
 
+    public boolean equals(Item item) {
+        return name.equals(item.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name);
+    }
 }
